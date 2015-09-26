@@ -1,0 +1,6 @@
+Disneyland 87
+Legoland 60 (210)
+Hotel 50
+greyhound 60
+
+baggage hold for hotel

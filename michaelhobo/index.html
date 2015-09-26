@@ -1,0 +1,128 @@
+<html>
+<head>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<style>
+		body{
+			background-color: #40435C;
+			margin: 0px;
+		}
+		.feed{
+			height: 100%;
+			width: 0px;
+			background-color: #808080;
+			float: left;
+		}
+		.expandedfeed{
+			height:100%;
+			width: 0px;
+			background-color: #FF00FF;
+			float: left;
+		}
+		.feedpost{
+
+		}
+		.expandedfeedpost{
+			margin: 10px 10px 10px 10px;
+		}
+		.tabsbar{
+			height: 100%;
+			width: 0px;
+			float: right;
+			background-color: #FFFF00;
+		}
+		.tab{
+			background-color: #00FFFF;
+			display:inline-block;
+			text-align: center;
+			-webkit-transform: rotate(-90deg);
+
+			-moz-transform: rotate(-90deg);
+
+			/* IE */
+			-ms-transform: rotate(-90deg);
+
+			/* Opera */
+			-o-transform: rotate(-90deg);
+
+			/* Internet Explorer */
+			filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+		}
+		.expandedtab{
+			background-color: #4040FF;
+			display: none;
+		}
+		.canvas{
+			background-color: #000000;
+		}
+		.pin{
+			background-color: transparent;
+		}
+	</style>
+</head>
+<body>
+	<div class="feed">
+		<?php
+			$posts = glob("feed/*");
+			foreach ($posts as $post){
+				$ending = "";
+				$dot = strpos($post, ".");
+				if ($dot != FALSE) {
+					$ending = substr($post, $dot);
+				}
+				if (strpos($post, "__tags__") == FALSE and $ending == ".txt") {
+
+				}
+			}
+			?>
+	</div>
+	<div class="expandedfeed"></div>
+	<div class="tabsbar">
+		<?php
+			$tabs = glob("tabs/*");
+			foreach ($tabs as $tab) {
+				echo "<div class='tab' id='".$tab."'>haha </div><div class='expandedtab' id='x".$tab."'>";
+				if (is_dir($tab)) {
+					$tabcontents = glob("tabs/" . $tab . "/*");
+					foreach ($tabcontents as $content) {
+						echo "<div class='tabcontent'> <a href='tabs/".$tab."/".$content."'></a>";
+					}
+				}
+				else {
+					 
+				}
+				echo "</div>";
+			}
+		?>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var winheight = screen.height;
+			var winwidth = screen.width;
+			var height = screen.availHeight;
+			var width = screen.availWidth;
+			var feedWidth = 0;
+			var tabsbarWidth = 0;
+			var numTabs = $(".tab").length;
+			var tabWidth = 0;
+			var tabHeight = 0;
+			var tabPadding = 0;
+			var expandedTabWidth = 0;
+			if (winwidth >= winheight) {
+				feedWidth = winwidth * 0.3;
+				tabWidth = winwidth * 0.03;
+				expandedTabWidth = winwidth * 0.3;
+			}
+			else {
+				feedWidth = winwidth * 0.5;
+				tabWidth = winwidth * 0.1;
+				expandedTabWidth = winwidth * 0.4;
+			}
+			tabsbarWidth = expandedTabWidth + tabsbarWidth;
+			tabPadding = (winheight - tabHeight * numTabs) / (numTabs * 2); //remaining height divided by numtabs and halved for top and bottom
+			$(".feed").css("width", feedWidth);
+			$(".tabsbar").css("width", tabsbarWidth);
+			$(".tab").css("height", tabHeight).css("width", tabWidth).css("padding-bottom", tabPadding).css("padding-top", tabPadding);
+		});
+	</script>
+</body>
+</html>

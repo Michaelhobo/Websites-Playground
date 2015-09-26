@@ -1,0 +1,150 @@
+/**
+ * Layout generated with http://layzilla.com
+ * Layout generator is free of use.
+ * We appreciate if you leave this comment block in commercial use of generator.
+ * All comment and ideas can be submitted to us using contacts below.
+ *
+ *    site: www.jmholding.com
+ *   email: info@jmholding.ru
+ *  twitter: @jmholding
+ */
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%; 
+}
+
+img {
+	width:100%;
+
+}
+
+.item {
+	overflow:hidden;
+}
+.run-item {
+	
+}
+
+.block_2 {
+	height: 100%;
+	width: 25%;
+	padding-bottom: 0px;
+	float:left;
+}
+
+#left_1 {
+	width: 100%;
+	height: 25%;
+	background-color: #996666;
+}
+
+#left_2 {
+	width: 100%;
+	height: 25%;
+	background:url(http://img4.duitang.com/uploads/item/201301/05/20130105215904_EN4Y5.thumb.600_0.jpeg) no-repeat center center;
+	background-size: 100%;
+}
+
+#left_3 {
+	width: 100%;
+	height: 25%;
+	background-color: #993399;
+}
+
+#left_4 {
+	width: 100%;
+	height: 25%;
+	background-color: #993366;
+}
+
+.block_3 {
+	height: 100%;
+	width: 50%;
+	padding-bottom: 0px;
+	float:left;
+}
+
+.block_14 {
+	width: 100%;
+	height: 25%;
+	background-color: #666699;
+}
+
+#mid_left_up {
+	height: 100%;
+	width: 50%;
+	padding-bottom: 0px;
+	background-color: red;
+	float:left;
+}
+
+#mid_right_up {
+	height: 100%;
+	width: 50%;
+	padding-bottom: 0px;
+	background-color: blue;
+	float:left;
+}
+
+.center {
+	width: 100%;
+	height: 50%;
+	background-color: #666666;
+	overflow:hidden;
+}
+
+.block_16 {
+	width: 100%;
+	height: 25%;
+	background-color: #6633ff;
+}
+
+#mid_left_down {
+	height: 100%;
+	width: 50%;
+	padding-bottom: 0px;
+	background-color:blue;
+	float:left;
+}
+
+#mid_right_down {
+	height: 100%;
+	width: 50%;
+	padding-bottom: 0px;
+	background-color:red;
+	float:left;
+}
+
+.block_5 {
+	height: 100%;
+	width: 25%;
+	padding-bottom: 0px;
+	float:left;
+}
+
+#right_1 {
+	width: 100%;
+	height: 25%;
+	background-color: #6699ff;
+}
+
+#right_2 {
+	width: 100%;
+	height: 25%;
+	background-color: #669999;
+}
+
+#right_3 {
+	width: 100%;
+	height: 25%;
+	background-color: #669966;
+}
+
+#right_4 {
+	width: 100%;
+	height: 25%;
+	background-color: #6666ff;
+}
+

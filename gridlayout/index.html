@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Testing</title>
+        <link href="style.css" type="text/css" rel="stylesheet" />
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script> //data
+            var objects = [["bike.png", "bike2.png"],["bike.png", "bike2.png"],["bike.png", "bike2.png"],["bike.png", "bike2.png"],["bike.png", "bike2.png"],["bike.png", "bike2.png"],["bike.png", "bike2.png"],["bike.png", "bike2.png"],["bike.png", "bike2.png"],["bike.png", "bike2.png"],["bike.png", "bike2.png"],["bike.png", "bike2.png"],["bike.png", "bike2.png"],["bike.png", "bike2.png"],["bike.png", "bike2.png"],["bike.png", "bike2.png"]];
+            var timeouts = [[2000,5000],[2000,5000],[2000,5000],[2000,5000],[2000,5000],[2000,5000],[2000,5000],[2000,5000],[2000,5000],[2000,5000],[2000,5000],[2000,5000],[2000,5000],[2000,5000],[2000,5000],[2000,5000]];
+            var item_id = ["#left_1","#left_2","#left_3","#left_4","#mid_left_up","#mid_left_down","#mid_right_up","#mid_right_down","#right_1","#right_2","#right_3","#right_4"];
+            <?php 
+                for ($folder = 0; $folder < 16; $folder++)
+                {
+                    $files = array_reverse(glob("gridlayout/*"));
+                    foreach($files as $file)
+                    {
+                        if ($file == "item.conf")
+                            $item_conf = file($file);
+                        elseif (strlen($file) < 4);
+                        elseif (substr($file, -4) == ".txt")
+                        {
+                            $filepath = $file;
+                            $Handle = fopen($filepath, "r");
+                            $read=fread($Handle, filesize($filepath));
+                            $title=substr($read, strpos($read, "*time")+ 5, strpos($read, "*title")-strpos($read, "*time")-5);
+                            $time=substr($read, 0, strpos($read, "*time"));
+                            $content=substr($read, strpos($read, "*title") + 6, strlen($read)-strpos($read, "*title") - 14);
+                            echo "<div class='blogpost'><div style='margin: 5px 5px 5px 5px;'> <div style='font-size: large; float: left;'>".$title. "</div><div style='float: right;'>".$time."</div><br/></div><div style='padding-top: 0%; padding-left: 3%; padding-right: 1%; padding-bottom: 1%; float: left'>".$content.  "</div></div><br>";
+                            //$height += 
+                            //if ();
+                            fclose($Handle);
+                        }
+                    }
+                }
+            ?>
+        </script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="block_2">
+                <div class="item" id="left_1">
+                	<img src="http://img4.duitang.com/uploads/item/201301/05/20130105215904_EN4Y5.thumb.600_0.jpeg"></img>
+                </div>
+                <div class="item" id="left_2">
+                </div>
+                <div class="item" id="left_3">
+                </div>
+                <div class="item" id="left_4">
+                </div>
+        </div>
+        <div class="block_3">
+                <div class="block_14">
+                        <div class="item" id="mid_left_up">
+                        	hahaha
+                        </div>
+                        <div class="item" id="mid_right_up">
+                        	<a href="www.google.com">Google is coolio</a>
+                        </div>
+                </div>
+                <div class="center">
+                </div>
+                <div class="block_16">
+                        <div class="item" id="mid_left_down">
+                        </div>
+                        <div class="item" id="mid_right_down">
+                        </div>
+                </div>
+        </div>
+        <div class="block_5">
+                <div class="item" id="right_1">
+                </div>
+                <div class="item" id="right_2">
+                </div>
+                <div class="item" id="right_3">
+                </div>
+                <div class="item" id="right_4">
+                	<textarea>Enter text here</textarea>
+                </div>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!--<script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script> -->
+        <!--<script> //load configurations
+            var conf = "";
+            $.get("items/00/item.txt", function (data) {
+                conf = data;
+                alert("hi");
+            });
+            $(".center").html("hihihi" + conf + "hihihi");
+        </script>-->
+        
+
+        <!--<script> //load items
+            var num = "";
+            var item_conf = "";
+            var html = "";
+            for (i=0; i < 16; i++) {
+                if (i < 10) num = "0" + i;
+                else num = "" + i;
+                $.ajax({
+                    url: "items/" + num + "/item.conf",
+                    success: function load_conf (e) {
+                        item_conf = e;
+                    }
+                });
+                $.ajax({
+                    url: "items/" + num + "/item.html",
+                    success: function load_html (e) {
+                        html = e;
+                    }
+                });
+
+            }
+            
+        </script>-->
+        <script> //process configurations and items, and load into html page
+
+            
+            function Timer(callback, delay) { //define Timer to replace setTimeout
+                var timerId, start, remaining = delay;
+
+                this.pause = function() {
+                    window.clearTimeout(timerId);
+                    remaining -= new Date() - start;
+                };
+
+                this.resume = function() {
+                    start = new Date();
+                    timerId = window.setTimeout(callback, remaining);
+                };
+                this.resume();
+            }
+
+            var items = new Array();
+            var timeout_ids = new Array();
+            var last_clicked;
+            function update_item(item_num, object_num, item_order) { //update each item after specified timeout
+                var next_object_num=object_num; //static case
+                var next_object_timeout=timeouts[item_num][object_num];
+                if (item_order=="numbered")
+                {
+                    if (items[item_num].objects.length == object_num) 
+                        next_object_num = 0;
+                    else next_object_num = object_num + 1;
+                    next_object_timeout=timeouts[item_num][next_object_num];
+                }
+                else if (item_order=="random")
+                {
+                    alert("still in development");
+                }
+                $(item_id[item_num]).html("<img src='"+"items/"+item_num+"/"+items[item_num].objects[next_object_num]+"'></img>");
+                timeout_ids[item_num] = new Timer('update_item(' + item_num + ', ' + next_object_num + ', "'+item_order+'")', next_object_timeout);
+            }
+            for (item=0; item < 16; item++) {
+                items[item] = new Object();
+                items[item].type = "basic";
+                items[item].order = "numbered";
+                items[item].objects = objects[item];
+                for (object=0; object < items[item].objects.length; object++) {
+                    items[item].objects[object].timeout = timeouts[item][object];
+                }
+                if (items[item].objects.length > 0) 
+                    $(item_id[item]).html("<img src='"+"items/"+item+"/"+items[item].objects[0]+"'></img>");
+                timeout_ids[item] = new Timer(update_item(item, 0, items[item].order), items[item].objects[0].timeout);
+            }
+            /*click and mouseover events start*/
+        	$(".item").on("click", function (event) {
+        		$(".center").css("background", getComputedStyle(event.target).background).html($('<div/>').append($(event.target).clone()).html());
+
+                
+                if (last_clicked) 
+                    last_clicked.resume();
+                last_clicked = timeout_ids[item_id.indexOf("#" + this.id)];
+                last_clicked.pause();
+        	});
+        	$(".run-item").on("click", function(event) {
+        		$(".center").html($('<div/>').append($(event.target).clone()).html());
+        	});
+            $(".item").on("mouseover", function(event) {
+
+            });
+
+            
+        </script>
+    </body>
+</html>

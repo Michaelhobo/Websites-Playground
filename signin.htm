@@ -1,0 +1,31 @@
+<html>
+<head>
+<title> Codacious - Sign in </title>
+</head>
+<style>
+body
+{
+background-color: #444445;
+color:#FFFFFF;
+}
+</style>
+<body OnLoad="document.login.user.focus()" text="#FFFFFF">
+<h1> Sign in </h1>
+<form method="post" action="<?php echo $PHP_SELF;?>" id="login" >
+Username:<input type="text" size="12" maxlength="12" id="user"><br />
+Password:<input type="text" size="12" maxlength="36" id="pass"><br />
+<button type="button" onclick="login(retrieve('user'), retrieve('pass'));">Log In</button>
+<script>
+function login(u, p)
+{
+if (u=="codacious.co" && p=="C0dacious") window.location.href = "admin.php";
+}
+function retrieve(id)
+{
+var txtbox = document.getElementById(id);
+var value = txtbox.value;
+return value;
+}
+</script>
+</body>
+</html>

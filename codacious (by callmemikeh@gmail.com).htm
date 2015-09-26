@@ -1,0 +1,152 @@
+<html>
+<head>
+<title> Codacious - Home </title>
+<style type="text/css">
+body 
+{
+background-color:#444445;
+color:#FFFFFF;
+}
+
+.blogpost
+{
+width: 90%;
+height: auto;
+background-color: rgba(255, 255, 255, 0.5);
+box-shadow: 0px 0px 5px 5px grey;
+font-weight: bold;
+color: white;
+overflow: auto;
+}
+
+.top
+{
+height: 20%;
+}
+
+.title
+{
+float: left;
+width: 90%;
+height: 100%;
+<!-- background-color: black;
+ -->}
+
+.signin
+{
+<!-- background-color: white;
+ -->float: right;
+<!-- width: 5%; -->
+height: 100%;
+}
+
+.content
+{
+font-weight: bold;
+height: 80%;
+}
+
+.leftcolumn
+{
+float: left;
+width: 20%;
+}
+
+.programmers
+{
+height: 25%;
+<!-- background-color: red;
+ -->}
+
+.projects
+{
+<!-- background-color: blue;
+ -->height: 75%;
+}
+
+.rightcolumn
+{
+float: right;
+width: 80%;
+}
+
+.blog
+{
+height: 75%;
+
+<!-- background-color: yellow;
+ -->
+}
+
+.gallery
+{
+<!-- background-color: magenta;
+ -->height: 25%;
+}
+</style>
+</head>
+<body link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF" text="#FFFFFF">
+
+<div class="top">
+<div class="title">
+<div style="font-size: 50pt; font-weight: bolder; font-style: italic">
+<FONT COLOR="#DDEEFF"> Codacious 
+<div style = "font-size:12pt; float: right; width: 80%; font-weight: bold">adj. Code characterized by excellence, admirability, attractiveness, boldness, and sexiness.</div>
+</FONT>
+</div>
+</div>
+<div class="signin">
+<a href="signin.htm">sign in</a>
+</div>
+</div>
+<div class="content">
+<div class="leftcolumn">
+<div class="programmers">
+<font size=5><u>Meet the programmers</u></font>
+<br>
+<div style="float: left; width: 50%">
+<a href="arunj.htm">
+<img src="aj.jpg" width="100" height="100"> <br>
+Arun Jandaur
+</a>
+</div>
+<div style="float: right; width: 50%">
+<a href="michaelh.htm">
+<img src="mh.jpeg" width="100" height="100"> 
+<br>
+Michael Ho
+</a>
+</div>
+</div>
+<div class="projects">
+<font size=5><a href="projects.htm">Projects</a></font>
+</div>
+</div>
+<div class="rightcolumn">
+<div class="blog">
+<font size=5><a href="blog.htm">Blog</a></font> <br/>
+<br>
+<script>
+writeblog("blarg", "I'm a pirate! and this is my first post. I have asfljslfjslfjslkjflsjflksjf fslfjsljflsf sfjldsfjlskjf slfjslkfjsljflsfj slfjsljflsjflkdsjflsjflsjf lsfjldsjflsjflsjfls slfjslfjsljflsjf sfljslkfjlkdsjflsjf lsfjslkdjflksjflksjf lsfjlsjflksjflsj");
+function writeblog(title, content)
+{
+var blogpost = "<div class='blogpost'><div style='margin: 5px 5px 5px 5px;'> <div style='font-size: large'>" +title +"</div><div style='float: right; width: 95%;'>" + content + "</div></div></div>";
+document.write(blogpost);
+[php]
+<?
+include ("filecount.php");
+?>
+[/php]
+
+}
+</script>
+</div>
+<div class="gallery">
+<font size=5><a href="gallery.htm">Gallery</a></font>
+</div>
+</div>
+</div>
+
+
+</body>
+<html>

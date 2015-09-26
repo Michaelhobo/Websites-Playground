@@ -1,0 +1,9 @@
+#Configure an item to be displayed on the main web page.
+#item id
+id:00;
+#type of item: menu, runnable, or basic
+type:basic;
+#order to change in: random, numbered, or static
+order:numbered;
+#what types are allowed. 
+allowed_types:[img];
